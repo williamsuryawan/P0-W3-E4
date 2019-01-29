@@ -19,7 +19,8 @@ console.log(input);
 
 var tanggal=input[3];
 var pisahtanggal=tanggal.split("/");
-console.log(pisahtanggal);
+// console.log(pisahtanggal);
+
 
 var namaBulan ="";
 switch(pisahtanggal[1]) {
@@ -37,6 +38,21 @@ switch(pisahtanggal[1]) {
   case "12" : {namaBulan="Desember"; break;}
 }
 console.log(namaBulan);
+
+var tanggalNumber =[]
+for (var i=0;i<pisahtanggal.length; i++) {
+  tanggalNumber.push(parseInt(pisahtanggal[i]))
+}
+// console.log(tanggalNumber);
+
+var sortTanggal= tanggalNumber.sort();
+// console.log(sortTanggal);
+
+var sortTgl = []
+for (var j=0; j<sortTanggal.length; j++) {
+  sortTgl.push(sortTanggal[j].toString())
+}
+console.log(sortTgl)
 
 var edittanggal=pisahtanggal.join("-");
 console.log(edittanggal);
